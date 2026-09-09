@@ -28,9 +28,9 @@ const SECRET = process.env.SECRET || ""; // the user's private trade secret (pro
 // `oyster-cvm build` from the open blind-sequencer source and pins them here; if the live enclave's
 // PCRs differ, it is NOT running the audited code. Override via EXPECT_PCR0/1/2 env.
 const EXPECT_PCR = {
-  0: (process.env.EXPECT_PCR0 || "7d08525c48ff4b28d4539924f9944957cb30973be51a3bcefa2a284e504d91636d35be6d17fed21a520a755f115b0330").toLowerCase(),
-  1: (process.env.EXPECT_PCR1 || "ed7759aa996a2e94c6086f24f61f354f75f9ea7f93a74f55d65c2cb5590d1af3930c9adbc57bb543764fa1f5c444f495").toLowerCase(),
-  2: (process.env.EXPECT_PCR2 || "4b23d52967848dbbb7a4b8373282c9fa1629e65febf04d4887ac3f58e4a98ca7519b3d0512fec4008dfa09b5c41b99c1").toLowerCase(),
+  0: (process.env.EXPECT_PCR0 ).toLowerCase(),
+  1: (process.env.EXPECT_PCR1 ).toLowerCase(),
+  2: (process.env.EXPECT_PCR2 ).toLowerCase(),
 };
 
 const DEPLOY = JSON.parse(fs.readFileSync("/root/zkhood/packages/contracts/deployments/robinhoodTestnet.json", "utf8"));
