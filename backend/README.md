@@ -17,7 +17,6 @@ The backend is not self-contained: at runtime it invokes the enclave sequencer a
 | `verify.sh` | Wrapper that runs `verify-privacy.js` with the right parameters (enclave IP, block range, optional `SETTLE_TX`/`WITHDRAW_TX`/`SECRET`). |
 | `post-deploy.sh` | Startup script: waits for the enclave `/health`, shows `/pubkey`, checks `bound:true`, loads env (RPC + relayer key), starts `node server.js` on `:8788`, and prints the proof. |
 | `point-backend-to-enclave.sh` | Points the backend at a given enclave IP (saves the IP and restarts the server against it). |
-| `backend-blind-test.js` | End-to-end test that simulates the browser doing the operator-blind trade through the backend (`/api/pubkey` → encrypt → `/api/trade-blind`). |
 | `package.json` / `package-lock.json` | Node dependencies (`ethers`, `cbor`, `dotenv`). |
 | `.env.example` | Template for the environment variables (empty values). |
 
@@ -56,6 +55,6 @@ oyster-cvm verify --enclave-ip <ENCLAVE_IP> --pcr0 <PCR0> --pcr1 <PCR1> --pcr2 <
 
 ## Notes
 
-- Do not commit `.env`, TLS certificates (`certs/`), logs (`backend.log`), or the ephemeral enclave IP (`.enclave-ip`).
+
 - Testnet software. Tokens do not represent real shares and have no backing/custody.
 
