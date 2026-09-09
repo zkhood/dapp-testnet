@@ -36,7 +36,7 @@ const EXPECT_PCR = {
 const DEPLOY = JSON.parse(fs.readFileSync("/root/zkhood/packages/contracts/deployments/robinhoodTestnet.json", "utf8"));
 const VAULT = ethers.getAddress(DEPLOY.contracts?.Vault || DEPLOY.Vault);
 const ROLLUP = ethers.getAddress(DEPLOY.contracts?.ZkHoodRollup || DEPLOY.ZkHoodRollup);
-const RELAYER = ethers.getAddress("0x7B63a6e924Bf9cc9a2c117Dc25E5FA78A3b3CFdB");
+const RELAYER = ethers.getAddress("RELAYER_ADDRESS_GOES_HERE");
 
 const hx = (v) => (v ? Buffer.from(v).toString("hex") : "");
 const line = (s = "") => console.log(s);
