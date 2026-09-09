@@ -15,8 +15,8 @@ const { ethers } = require("ethers");
 try { require("dotenv").config({ path: "/root/zkhood/packages/contracts/.env" }); } catch (_) {}
 
 const RPC = process.env.ROBINHOOD_TESTNET_RPC_URL;
-const ENCLAVE = process.env.ENCLAVE || "http://52.66.35.187:4000";
-const NITRO = process.env.NITRO || "http://52.66.35.187:1300";
+const ENCLAVE = process.env.ENCLAVE ;
+const NITRO = process.env.NITRO ;
 const SCAN = parseInt(process.env.SCAN_BLOCKS || "400", 10);
 
 // Optional per-transaction receipt: verify THIS specific trade (from the dApp result panel).
