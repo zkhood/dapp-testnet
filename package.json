@@ -1,0 +1,23 @@
+{
+  "name": "zkhood-dapp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ZKHood — real on-chain dApp (MetaMask + Solidity) for private TEE-executed, ZK-settled stock token trading. Testnet demo with placeholders for production config.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network robinhoodTestnet",
+    "frontend": "http-server ./frontend -p 5173 -c-1 -o",
+    "test": "hardhat test"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.10",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5"
+  }
+}
