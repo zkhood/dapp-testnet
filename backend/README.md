@@ -17,8 +17,16 @@ The backend is not self-contained: at runtime it invokes the enclave sequencer a
 | `verify.sh` | Wrapper that runs `verify-privacy.js` with the right parameters (enclave IP, block range, optional `SETTLE_TX`/`WITHDRAW_TX`/`SECRET`). |
 | `post-deploy.sh` | Startup script: waits for the enclave `/health`, shows `/pubkey`, checks `bound:true`, loads env (RPC + relayer key), starts `node server.js` on `:8788`, and prints the proof. |
 | `point-backend-to-enclave.sh` | Points the backend at a given enclave IP (saves the IP and restarts the server against it). |
-| `package.json` / `package-lock.json` | Node dependencies (`ethers`, `cbor`, `dotenv`). |
 | `.env.example` | Template for the environment variables (empty values). |
+
+
+## Dependencies
+
+Node.js 20+. Install the required packages before running:
+
+```bash
+npm install ethers cbor dotenv
+```
 
 ## Configuration
 
@@ -33,7 +41,6 @@ Copy `.env.example` to a local `.env` and fill in:
 | `PORT` | Backend port (default `8788`). |
 
 No keys are hardcoded in the source; everything is read from `process.env`.
-
 ## Verify
 
 ```bash
