@@ -1,0 +1,22 @@
+{
+  "network": "robinhoodTestnet",
+  "chainId": 46630,
+  "deployedAt": "2026-09-14T15:21:16.288Z",
+  "contracts": {
+    "ProtocolToken": "0x2CfFFBD3B7F43Ce66d89d3Ab48Ef0e6052854912",
+    "StakingGate": "0xB76675308ca50368A3CD420B71C150E453E614C8",
+    "AssetRegistry": "0x3F94A87f9b6CeF7871a2db69D389B5FdaBd6Cc67",
+    "NullifierRegistry": "0x925a1487d71E04f1C549FF07b35Fa9cD477e29a2",
+    "SP1Verifier": "0x9e36b8B3385177870b418b7442eA33a3dE54f5e7",
+    "ZkHoodRollup": "0x49be6D3D155D2A8B90d8D77655B59a62167Cdd5A",
+    "Vault": "0xea8E43AaD0375AEaD10DB4E9Cd21A777D5074d5A",
+    "FeeTreasury": "0xE9B0De02e0bDa1331142F55a2C454433BBD15c1B"
+  },
+  "rollup": {
+    "programVKey": "0x00dd707c2148c2035c7b4fa9003262a0426cd5b30ce4ed416e10759f29821afb",
+    "expectedChainId": "46630",
+    "rollupId": "0x00000000000000000000000000000000000000AA",
+    "stakingGate": "0x0000000000000000000000000000000000000000"
+  },
+  "stockTokens": []
+}
